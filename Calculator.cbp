@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="calc.cpp" />
+		<Unit filename="calc.h" />
+		<Unit filename="input.cpp" />
+		<Unit filename="input.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1569040724 source:/home/treazul/CodeBlocksProjects/Calculator/input.cpp
+	<iostream>
+	<string>
+	<algorithm>
+
+1569040617 source:/home/treazul/CodeBlocksProjects/Calculator/main.cpp
+	<iostream>
+	<cmath>
+	<string>
+	<algorithm>
+	"input.h"
+	"calc.h"
+
+1569038359 /home/treazul/CodeBlocksProjects/Calculator/input.h
+
+1569039899 source:/home/treazul/CodeBlocksProjects/Calculator/calc.cpp
+	<iostream>
+	<cmath>
+	<algorithm>
+
+1569039934 /home/treazul/CodeBlocksProjects/Calculator/calc.h
+
