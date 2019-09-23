@@ -1,8 +1,8 @@
+#include "calc.h"
+#include "io.h"
 #include <iostream>
 #include <cmath>
 #include <algorithm>
-
-void quitNow(int code);
 
 double calculateResult(double x, double y, char z)
 {
@@ -21,8 +21,8 @@ double calculateResult(double x, double y, char z)
         case '/':
             if (y == 0)
             {
-                std::cout << "ERROR: TRIED TO DIVIDE BY ZERO. \n";
-                quitNow(55);
+                std::cout << "Can't divide by Zero. \n";
+                result = x;
                 break;
             }
             else
@@ -40,7 +40,7 @@ double calculateResult(double x, double y, char z)
             break;
         default:
             std::cout << "An error has occurred. This mathematical operation can't be done here. However, you shouldn't see this because it should be handled before you reach this point.";
-            exit(0);
+            quitNow(44);
             break;
     }
 

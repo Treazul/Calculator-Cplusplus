@@ -1,13 +1,15 @@
+#include "input.h"
+#include "io.h"
 #include <iostream>
 #include <string>
 #include <algorithm>
 
-void quitNow(int code);
 
 // Is the input a number?
 bool is_number(const std::string &s)
 {
-  return !s.empty() && std::all_of(s.begin(), s.end(), ::isdigit);
+    // To be honest, I don't know what this does. Someone suggested this as a way of checking if it's a number and it works!
+    return !s.empty() && std::all_of(s.begin(), s.end(), ::isdigit);
 }
 
 // Ignore anything that isn't the expected input and clear it all.
@@ -22,9 +24,10 @@ double getUserInput()
     // Loops until there's a correct input
     while (true)
     {
-        std::cout << "Enter a number: ";
+        std::cout << "Enter a positive number: ";
         std::string input;
         std::cin >> input;
+        // If it's a number, ignore the extranious stuff and turn the result into a double from a string.
         if(is_number(input))
         {
             cinIgnore();

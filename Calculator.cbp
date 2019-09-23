@@ -36,6 +36,8 @@
 		<Unit filename="calc.h" />
 		<Unit filename="input.cpp" />
 		<Unit filename="input.h" />
+		<Unit filename="io.cpp" />
+		<Unit filename="io.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
