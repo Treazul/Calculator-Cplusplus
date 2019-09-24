@@ -2,7 +2,6 @@
 #include "io.h"
 #include <iostream>
 #include <cmath>
-#include <algorithm>
 
 double calculateResult(double x, double y, char z)
 {
@@ -30,11 +29,9 @@ double calculateResult(double x, double y, char z)
                 result = x / y;
                 break;
             }
-
         case '%':
             result = fmod(x, y);
             break;
-
         case 'p':
             result = pow(x, y);
             break;

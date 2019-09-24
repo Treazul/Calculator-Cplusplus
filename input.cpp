@@ -2,7 +2,6 @@
 #include "io.h"
 #include <iostream>
 #include <string>
-#include <algorithm>
 
 
 // Is the input a number?
@@ -59,6 +58,7 @@ char getMathematicalOperation()
         char input{ };
         std::cin >> input;
         cinIgnore();
+        // Check if expected input otherwise spit an error.
         if (input == '+' || input == '-' || input == '*' || input == '/' || input == '%' || input == 'p')
         {
             return input;
