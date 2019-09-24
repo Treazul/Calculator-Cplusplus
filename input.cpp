@@ -6,16 +6,22 @@
 
 
 // Is the input a number?
-bool is_number(const std::string &s)
+inline bool is_number(const std::string & s)
 {
-    // To be honest, I don't know what this does. Someone suggested this as a way of checking if it's a number and it works!
-    return !s.empty() && std::all_of(s.begin(), s.end(), ::isdigit);
+    // if the string is empty, the first character is not a digit and not a negative or positive, it's not a number
+    if(s.empty() || ((!isdigit(s[0])) && (s[0] != '-') && (s[0] != '+'))) return false;
+
+    char * p;
+	strtol(s.c_str(), &p, 10);
+
+	return (*p == 0);
 }
 
 // Ignore anything that isn't the expected input and clear it all.
 void cinIgnore()
 {
     std::cin.ignore(32767, '\n');
+
 }
 
 
@@ -24,7 +30,7 @@ double getUserInput()
     // Loops until there's a correct input
     while (true)
     {
-        std::cout << "Enter a positive number: ";
+        std::cout << "Enter a number: ";
         std::string input;
         std::cin >> input;
         // If it's a number, ignore the extranious stuff and turn the result into a double from a string.
