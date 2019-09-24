@@ -17,7 +17,7 @@ inline bool is_number(const std::string & s)
 	return (*p == 0);
 }
 
-// Ignore anything that isn't the expected input and clear it all.
+// Clear the output of cin.
 void cinIgnore()
 {
     std::cin.ignore(32767, '\n');
@@ -33,10 +33,10 @@ double getUserInput()
         std::cout << "Enter a number: ";
         std::string input;
         std::cin >> input;
-        // If it's a number, ignore the extranious stuff and turn the result into a double from a string.
+        cinIgnore();
+        // If it's a number, return the number otherwise print an error message.
         if(is_number(input))
         {
-            cinIgnore();
             double result = std::stod(input);
             return result;
         }
