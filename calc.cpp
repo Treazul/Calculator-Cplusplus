@@ -18,9 +18,14 @@ double calculateResult(double x, double y, char z)
             result = x * y;
             break;
         case '/':
-            if (y == 0)
+            if (y == 0 && x != 0)
             {
                 std::cout << "Can't divide by Zero. \n";
+                result = x;
+                break;
+            }
+            else if (y == 0 && x == 0)
+            {
                 result = x;
                 break;
             }
